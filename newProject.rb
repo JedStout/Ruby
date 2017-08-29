@@ -1,21 +1,25 @@
 puts "Please name your new Project?"
 projectName = gets.strip
 
-def day_counter(week)
-    day = 1
-    while (day <= 4)
-        puts `touch #{week}/Day#{day}.rb`
-        day += 1
-    end
-end
+puts(projectName);
 
-while (week <= 11)
-    puts `mkdir Week#{week}`
-    day_counter("Week#{week}")
-     week += 1
-end
+# puts `mkdir #{projectName}`
+# puts `cd #{projectName}`
+# puts `touch index.html`
 
-puts `git add .`
-puts `git commit -m 'Additional saves'`
-puts `git push origin master`
-puts `clear`
+# puts `mkdir css`
+# puts `touch main.css`
+# puts `cd ..`
+
+# puts `mkdir js`
+# puts `touch app.js`
+# puts `cd ..`
+
+# puts `mkdir images`
+
+
+# puts `git init`
+# puts `git add .`
+# puts `git commit -m 'First Commit for #{projectName}'`
+# puts `git push origin master`
+# puts `clear`
