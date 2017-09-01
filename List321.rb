@@ -22,19 +22,23 @@ def display_menu
   gets.to_i
 end
 
-def menu_options(input)
+def conRay
   contactList = []
+end
+
+def menu_options(input)
+
   case input
     when 1
-      add_contact(contactList)
+      add_contact(conRay)
     when 2
-      view_contacts(contactList)
+      view_contacts(conRay)
     when 3
-      edit_contacts(contactList)
+      edit_contacts(conRay)
     when 4
-      delete_contacts(contactList)
+      delete_contacts(conRay)
     when 5
-      search_contact(contactList)
+      search_contact(conRay)
     when 6
       exit
     else
@@ -42,37 +46,37 @@ def menu_options(input)
     end
 end
 
-def add_contact(contactList)
+def add_contact(conRay)
   puts "Add a name to the list"
   name = gets.strip
   contactList << name
 end
 
-def view_contacts(contactList)
+def view_contacts(conRay)
   puts ""
   contactList.sort.each_with_index do |person, index|
   puts "#{index + 1}) #{person}"
   end
 end
 
-def edit_contacts(contactList)
+def edit_contacts(conRay)
   puts "Name to edit?"
   edit_person = gets.strip
-  index = contactList.index(edit_person)
+  index = conRay.index(edit_person)
 
   puts "New contact info?"
   updated_person = gets.strip
 
-  contactList[index] = updated_person
+  conRay[index] = updated_person
 end
 
-def delete_contacts(contactList)
+def delete_contacts(conRay)
   puts "Who do you want to delete?"
   deleted_person = gets.strip
-  contactList.delete(deleted_person)
+  conRay.delete(deleted_person)
 end
 
-def search_contact(contactList)
+def search_contact(conRay)
   puts "Who do you search for?"
   search = gets.strip
   if array1.include?(search)

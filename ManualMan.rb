@@ -30,7 +30,17 @@ def search
   man(cmd)
 end
 
-def display_menu
+
+
+
+
+
+while true
+  commands = ['mv', 'cp', 'mkdir', 'ls', 'rm']
+
+  puts `man #{cmd}`
+
+
   puts "======================="
   puts "MAIN MENU"
   puts "1: Command Line"
@@ -38,10 +48,10 @@ def display_menu
   puts "3: Exit"
   puts "======================="
   puts
-  gets.to_i
-end
+  gets.choice.to_i
+  
 
-def menu_options(choice)
+  menu_options(choice)
   case choice
   when 1
     cmd_line_menu
@@ -52,10 +62,4 @@ def menu_options(choice)
   else
     puts "Chose a valid option 1,2,3"
   end
-end
-
-
-while true
-  choice = display_menu
-  menu_options(choice)
 end
