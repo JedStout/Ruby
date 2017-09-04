@@ -1,7 +1,7 @@
-contactList = ['Jeff', 'kasd', 'Jonny']
+commandList = ['mv'`, 'cp', 'mkdir', 'ls', 'rm']
 
 
 puts ""
-  contactList.sort.each_with_index do |person, index|
-  puts "#{index + 1}) #{person}"
+  commandList.sort.each_with_index do |command|
+  puts "man #{command}"
   end
