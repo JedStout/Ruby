@@ -1,6 +1,6 @@
 #Contact List
 
-array1 = []
+contactList = []
 puts "Welcome to Contact List"
 puts "And who might you be?"
 user = gets.strip
@@ -13,37 +13,37 @@ while true
     3: Edit Contact
     4: Delete Contact
     5: Search for Contact
-    6: Quit """
-  print "Pick a number"
+    6: Quit 
+    Pick a number"""
   input = gets.strip.to_i
 
 case input
   when 1
     puts "Add a name to the list"
     name =gets.strip
-    array1 << name
+    contactList << name
  when 2
     puts ""
-    array1.sort.each_with_index do |person, index|
+    contactList.sort.each_with_index do |person, index|
       puts "#{index + 1}) #{person}"
     end
   when 3
     puts "Who do you edit?"
     edit_person = gets.strip
-    index = array1.index(edit_person)
+    index = contactList.index(edit_person)
 
     puts "Whats the new info?"
     updated_person = gets.strip
 
-    array1[index] = updated_person
+    contactList[index] = updated_person
   when 4
     puts "Who do you want to delete?"
     deleted_person = gets.strip
-    array1.delete(deleted_person)
+    contactList.delete(deleted_person)
   when 5
     puts "Who do you search for?"
     search = gets.strip
-    if array1.include?(search)
+    if contactList.include?(search)
       puts "#{search} is here"
     else
       puts "#{search} could not be found"
