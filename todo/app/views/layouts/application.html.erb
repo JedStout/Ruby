@@ -3,12 +3,17 @@
   <head>
     <title>Todo</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/3b1ef1e806.css">
 
+  </head>
   <body>
-    <%= yield %>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+  
   </body>
 </html>
