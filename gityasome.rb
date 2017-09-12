@@ -1,6 +1,11 @@
 #### GIT YA SOME  ####
 
 puts `git add .`
-puts `git commit -m 'Additional saves'`
+
+puts "Type commit message"
+comment = gets.strip
+puts `git commit -m '#{comment}'`
+
 puts `git push origin master`
+
 puts `clear`
