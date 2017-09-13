@@ -1,0 +1,36 @@
+<div class="container">
+
+<h1 class="center-align">DPLs Recipes</h1>
+
+<%= link_to 'New Recipe', new_recipe_path %>
+
+
+    <% @recipes.each do |recipe| %>
+    <div class="col s5">
+        <div class="card small blue-grey darken-1">
+            <div class="card-content white-text">
+                <h4 class="card-title"><%= recipe.title %></h4>
+                    <h6>Created by: <%= recipe.creator %></h6>
+        
+                    <p><%= recipe.food_type %></p>
+        
+                    <p><%= recipe.description %></p>
+        
+                <ul>
+                    <li>Duration: <%= recipe.duration %></li>
+                    <li>Rating: <%= recipe.rating %> stars</li>
+                </ul>
+        
+                <div class="card-action">
+                    <%= link_to 'Edit Recipe', edit_recipe_path(recipe) %>
+                    <%= link_to 'Delete Recipe', recipe_path(recipe), method: :delete %>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+        
+    <% end %>
+</div>
+

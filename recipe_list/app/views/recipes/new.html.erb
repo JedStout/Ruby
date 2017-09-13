@@ -1,0 +1,23 @@
+<h1>New Recipe</h1>
+
+<%= form_for @recipe do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :creator %>
+  <%= f.text_field :creator %>
+
+  <%= f.label :duration %>
+  <%= f.text_field :duration %>
+
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+
+  <%= f.label :food_type %>
+  <%= f.text_field :food_type %>
+
+  <%= f.submit class: 'waves-effect waves-light btn' %>
+<% end %>
